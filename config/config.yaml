@@ -1,0 +1,25 @@
+input_mode: raw
+samples: config/samples.tsv
+
+threads:
+  fastqc: 4
+  fastp: 8
+  megahit: 8
+  multiqc: 4
+
+fastp:
+  detect_adapter_for_pe: true
+  qualified_quality_phred: 20
+  length_required: 50
+  cut_front: false
+  cut_tail: false
+  cut_mean_quality: 20
+  cut_window_size: 4
+
+quality_gate:
+  minimum_reads: 100000
+  minimum_q30_rate: 0.70
+
+plasmid_tools:
+  min_contig_length: 1000
+  split_size: 5000

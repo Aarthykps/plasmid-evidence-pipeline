@@ -1,0 +1,43 @@
+# ==============================
+# Project data and generated files
+# ==============================
+
+data/
+results/
+logs/
+
+# Snakemake working directory
+.snakemake/
+
+# Large/reference databases
+resources/*
+
+# Keep the resources documentation
+!resources/README.md
+
+# Local software / downloaded tools
+software/
+databases/
+
+# Old development/backup files
+archive/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.venv/
+venv/
+workflow/scripts/plasmid_evidence.py.final
