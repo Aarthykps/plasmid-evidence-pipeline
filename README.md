@@ -1,3 +1,22 @@
+## Quickstart
+
+### Install
+
+```bash
+git clone [https://github.com/Aarthykps/plasmid-evidence-pipeline.git](https://github.com/Aarthykps/plasmid-evidence-pipeline.git)
+cd plasmid-evidence-pipeline
+conda env create -f environment.yml
+conda activate plasmid-evidence
+```
+
+### Run
+
+```bash
+snakemake --cores 4 --use-conda
+```
+
+The example sample is listed in `config/samples.tsv`. Final results are written to `results/final/`.
+
 # Metagenomic Plasmid-Evidence Pipeline
 
 A reproducible Snakemake workflow for identifying and characterizing candidate plasmid-containing contigs from metagenomic sequencing data using integrated sequence, read-mapping, gene-function, and mobile-element evidence.
@@ -146,8 +165,9 @@ An antimicrobial resistance gene is therefore not used by itself to classify a c
 
 ## Dataset and final results
 
-The workflow was evaluated on one paired-end metagenomic sample.
-
+> **Validation scope:** This proof-of-concept has been validated on one public metagenomic dataset and one supported candidate plasmid. The workflow is designed to scale to additional samples and candidates, but broader validation remains future work.
+The example workflow uses paired-end reads from SRA accession
+[SRR37020575](https://www.ncbi.nlm.nih.gov/sra/?term=SRR37020575)
 After assembly and filtering:
 
 - 59,481 contigs >=1 kb were retained

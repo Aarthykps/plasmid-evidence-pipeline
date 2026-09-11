@@ -322,7 +322,7 @@ rule megahit:
         megahit \
             -1 {input.r1} \
             -2 {input.r2} \
-            --out-dir results/assembly/{wildcards.sample} \
+            --out-dir {output.contigs.dirname} \
             --out-prefix final \
             --num-cpu-threads {threads} \
             > {log} 2>&1
